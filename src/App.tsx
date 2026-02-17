@@ -20,6 +20,7 @@ function App() {
   const [whatWeDevelopImageIndex, setWhatWeDevelopImageIndex] = useState(0)
   const [operationalReadinessImageIndex, setOperationalReadinessImageIndex] = useState(0)
   const [isSpanish, setIsSpanish] = useState(false)
+  const [hasMessage, setHasMessage] = useState(false)
   
   // Refs for scroll animations on home page
   const overlapBoxRef = useRef<HTMLDivElement>(null)
@@ -519,7 +520,7 @@ function App() {
             <div className="board-grid">
               <div className="board-member-wrapper" onClick={() => setCurrentPage('bridget-allen')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=1" alt="Bridget Allen" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Bridget+Allen&size=400&background=FF6000&color=fff&bold=true&font-size=0.4" alt="Bridget Allen" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Bridget Allen</h3>
@@ -528,7 +529,7 @@ function App() {
               </div>
               <div className="board-member-wrapper" onClick={() => setCurrentPage('sarah-mitchell')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=2" alt="Sarah Mitchell" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Sarah+Mitchell&size=400&background=E63946&color=fff&bold=true&font-size=0.4" alt="Sarah Mitchell" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Sarah Mitchell MBA MAICD</h3>
@@ -537,7 +538,7 @@ function App() {
               </div>
               <div className="board-member-wrapper" onClick={() => setCurrentPage('brad-mitchell')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=3" alt="Brad Mitchell" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Brad+Mitchell&size=400&background=FF6000&color=fff&bold=true&font-size=0.4" alt="Brad Mitchell" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Brad Mitchell</h3>
@@ -546,7 +547,7 @@ function App() {
               </div>
               <div className="board-member-wrapper" onClick={() => setCurrentPage('flavio-grilli')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=4" alt="Flavio Grilli" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Flavio+Grilli&size=400&background=E63946&color=fff&bold=true&font-size=0.4" alt="Flavio Grilli" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Flavio Grilli</h3>
@@ -555,7 +556,7 @@ function App() {
               </div>
               <div className="board-member-wrapper" onClick={() => setCurrentPage('pamela-contreras')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=5" alt="Pamela Contreras Ibañez" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Pamela+Contreras&size=400&background=FF6000&color=fff&bold=true&font-size=0.4" alt="Pamela Contreras Ibañez" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Pamela Contreras Ibañez</h3>
@@ -564,7 +565,7 @@ function App() {
               </div>
               <div className="board-member-wrapper" onClick={() => setCurrentPage('deb-wakefield')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=6" alt="Deb Wakefield" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Deb+Wakefield&size=400&background=E63946&color=fff&bold=true&font-size=0.4" alt="Deb Wakefield" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Deb Wakefield</h3>
@@ -573,7 +574,7 @@ function App() {
               </div>
               <div className="board-member-wrapper" onClick={() => setCurrentPage('joey-meiers')}>
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=7" alt="Joey Meiers" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Joey+Meiers&size=400&background=FF6000&color=fff&bold=true&font-size=0.4" alt="Joey Meiers" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Joey Meiers</h3>
@@ -582,7 +583,7 @@ function App() {
               </div>
               <div className="board-member-wrapper">
                 <div className="board-member-card">
-                  <img src="https://i.pravatar.cc/300?img=8" alt="Board Member" className="board-member-img" />
+                  <img src="https://ui-avatars.com/api/?name=Team+Member&size=400&background=E63946&color=fff&bold=true&font-size=0.4" alt="Board Member" className="board-member-img" />
                 </div>
                 <div className="board-member-info">
                   <h3 className="board-member-name">Name</h3>
@@ -596,39 +597,82 @@ function App() {
         <div className="contact-page">
           <div className="contact-hero-section">
             <h1 className="contact-main-title">Get in touch</h1>
-            <div className="contact-placeholders">
-              <a href="mailto:bridget@hermanaseng.com" className="contact-action-btn">Email us</a>
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="contact-action-btn">Book a call</a>
-            </div>
           </div>
           <div className="contact-container">
             <div className="contact-form-section">
-              <h2 className="contact-info-title">Send Inquiry</h2>
-              <form className="contact-form">
+              <form 
+                className="contact-form" 
+                action="https://formsubmit.co/bridget@hermanaseng.com" 
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New Contact Form Inquiry from Hermanas Engineering" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="box" />
                 <div className="form-row">
                   <div className="form-group">
-                    <input type="text" id="firstName" placeholder="First Name" className="form-input" />
+                    <input 
+                      type="text" 
+                      name="first_name"
+                      id="firstName" 
+                      placeholder="First Name" 
+                      className="form-input" 
+                      required
+                    />
                   </div>
                   <div className="form-group">
-                    <input type="text" id="lastName" placeholder="Last Name" className="form-input" />
+                    <input 
+                      type="text" 
+                      name="last_name"
+                      id="lastName" 
+                      placeholder="Last Name" 
+                      className="form-input" 
+                      required
+                    />
                   </div>
                 </div>
                 <div className="form-row">
                   <div className="form-group full-width">
-                    <input type="email" id="email" placeholder="Email Address" className="form-input" />
+                    <input 
+                      type="email" 
+                      name="email"
+                      id="email" 
+                      placeholder="Email Address" 
+                      className="form-input" 
+                      required
+                    />
                   </div>
                 </div>
                 <div className="form-row">
                   <div className="form-group full-width">
-                    <input type="tel" id="contactNo" placeholder="Contact No" className="form-input" />
+                    <input 
+                      type="tel" 
+                      name="contact_no"
+                      id="contactNo" 
+                      placeholder="Contact No" 
+                      className="form-input" 
+                      required
+                    />
                   </div>
                 </div>
                 <div className="form-row">
                   <div className="form-group full-width">
-                    <textarea id="message" placeholder="Message" className="form-textarea" rows={5}></textarea>
+                    <textarea 
+                      name="message"
+                      id="message" 
+                      placeholder="Message" 
+                      className="form-textarea" 
+                      rows={5}
+                      required
+                      onChange={(e) => setHasMessage(e.target.value.trim().length > 0)}
+                    ></textarea>
                   </div>
                 </div>
-                <button type="submit" className="submit-btn">Submit</button>
+                <button 
+                  type="submit" 
+                  className={`submit-btn ${hasMessage ? 'submit-btn-active' : ''}`}
+                >
+                  Submit
+                </button>
               </form>
             </div>
           </div>
@@ -965,7 +1009,7 @@ function App() {
             <h1 className="team-member-name-large">Bridget Allen</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=1" alt="Bridget Allen" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Bridget+Allen&size=600&background=FF6000&color=fff&bold=true&font-size=0.5" alt="Bridget Allen" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Director – Strategy, Commissioning & Technical Delivery</h2>
@@ -1011,7 +1055,7 @@ function App() {
             <h1 className="team-member-name-large">Sarah Mitchell MBA MAICD</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=2" alt="Sarah Mitchell" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Sarah+Mitchell&size=600&background=E63946&color=fff&bold=true&font-size=0.5" alt="Sarah Mitchell" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Director – Project Studies, Execution & Metallurgy</h2>
@@ -1046,7 +1090,7 @@ function App() {
             <h1 className="team-member-name-large">Brad Mitchell</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=3" alt="Brad Mitchell" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Brad+Mitchell&size=600&background=FF6000&color=fff&bold=true&font-size=0.5" alt="Brad Mitchell" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Director – Metallurgy & Process Commissioning</h2>
@@ -1081,7 +1125,7 @@ function App() {
             <h1 className="team-member-name-large">Flavio Grilli</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=4" alt="Flavio Grilli" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Flavio+Grilli&size=600&background=E63946&color=fff&bold=true&font-size=0.5" alt="Flavio Grilli" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Manager – Commissioning & Ops. Readiness</h2>
@@ -1116,7 +1160,7 @@ function App() {
             <h1 className="team-member-name-large">Pamela Contreras Ibañez</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=5" alt="Pamela Contreras Ibañez" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Pamela+Contreras&size=600&background=FF6000&color=fff&bold=true&font-size=0.5" alt="Pamela Contreras Ibañez" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Manager – South America, Manager- Environment and Permits</h2>
@@ -1151,7 +1195,7 @@ function App() {
             <h1 className="team-member-name-large">Deb Wakefield</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=6" alt="Deb Wakefield" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Deb+Wakefield&size=600&background=E63946&color=fff&bold=true&font-size=0.5" alt="Deb Wakefield" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Admin, Scheduling and Document Control</h2>
@@ -1186,7 +1230,7 @@ function App() {
             <h1 className="team-member-name-large">Joey Meiers</h1>
           </div>
           <div className="team-member-image-container">
-            <img src="https://i.pravatar.cc/300?img=7" alt="Joey Meiers" className="team-member-large-img" />
+            <img src="https://ui-avatars.com/api/?name=Joey+Meiers&size=600&background=FF6000&color=fff&bold=true&font-size=0.5" alt="Joey Meiers" className="team-member-large-img" />
           </div>
           <div className="team-member-role-container">
             <h2 className="team-member-role">Cost Control & Project Controls</h2>

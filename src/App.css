@@ -790,6 +790,25 @@
   justify-content: center;
 }
 
+/* Ensure hamburger menu is hidden and contact button is visible on larger screens */
+@media (min-width: 901px) {
+  .hamburger-menu {
+    display: none !important;
+  }
+
+  .nav-contact-btn {
+    display: block !important;
+  }
+
+  .nav-links-desktop {
+    display: flex !important;
+  }
+
+  .nav-links-mobile {
+    display: none !important;
+  }
+}
+
 .hamburger-menu svg {
   width: 24px;
   height: 24px;
@@ -1799,12 +1818,24 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: 1rem;
 }
 
 .submit-btn:hover {
   background: #333;
+}
+
+.submit-btn-active {
+  background: linear-gradient(135deg, #FF6000 0%, #E63946 100%) !important;
+  box-shadow: 0 4px 15px rgba(255, 96, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-btn-active:hover {
+  background: linear-gradient(135deg, #E63946 0%, #FF6000 100%) !important;
+  box-shadow: 0 6px 20px rgba(255, 96, 0, 0.6);
+  transform: translateY(-3px);
 }
 
 /* Commissioning Page Styles */
@@ -2052,9 +2083,13 @@
 @media (max-width: 768px) {
   /* Hamburger Menu */
   .hamburger-menu {
-    display: flex;
+    display: flex !important;
     margin-left: auto;
     margin-right: 1rem;
+  }
+
+  .nav-links-desktop {
+    display: none !important;
   }
 
   .nav-links {
@@ -2093,7 +2128,7 @@
   }
 
   .nav-contact-btn {
-    display: none;
+    display: none !important;
   }
 
   .nav-contact-link {
@@ -2210,11 +2245,15 @@
   }
 
   .nav-contact-btn {
-    display: none;
+    display: none !important;
+  }
+
+  .nav-links-desktop {
+    display: none !important;
   }
 
   .hamburger-menu {
-    display: flex;
+    display: flex !important;
     margin-left: auto;
     margin-right: 1rem;
     z-index: 1001;
