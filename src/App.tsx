@@ -224,13 +224,11 @@ function App() {
           </button>
           <div className={`nav-links nav-links-desktop ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); setIsServicesOpen(false); setIsMobileMenuOpen(false); }}>Home</a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); setIsServicesOpen(false); setIsMobileMenuOpen(false); }}>Team</a>
             <a href="#" onClick={(e) => { e.preventDefault(); setIsServicesOpen(!isServicesOpen); setIsMobileMenuOpen(false); }}>Services</a>
           </div>
           <div className={`nav-links nav-links-mobile ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); setIsServicesOpen(false); setIsMobileMenuOpen(false); }}>Home</a>
             <a href="#" onClick={(e) => { e.preventDefault(); setIsServicesOpen(!isServicesOpen); setIsMobileMenuOpen(false); }}>Services</a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); setIsServicesOpen(false); setIsMobileMenuOpen(false); }}>Team</a>
             <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('contact'); setIsServicesOpen(false); setIsMobileMenuOpen(false); }}>Contact Us</a>
           </div>
           <button className="nav-contact-btn" onClick={(e) => { e.preventDefault(); setCurrentPage('contact'); setIsServicesOpen(false); }}>Contact Us</button>
@@ -579,15 +577,6 @@ function App() {
                 <div className="board-member-info">
                   <h3 className="board-member-name">Joey Meiers</h3>
                   <p className="board-member-title">Cost Control & Project Controls</p>
-                </div>
-              </div>
-              <div className="board-member-wrapper">
-                <div className="board-member-card">
-                  <img src="https://ui-avatars.com/api/?name=Team+Member&size=400&background=E63946&color=fff&bold=true&font-size=0.4" alt="Board Member" className="board-member-img" />
-                </div>
-                <div className="board-member-info">
-                  <h3 className="board-member-name">Name</h3>
-                  <p className="board-member-title">Title</p>
                 </div>
               </div>
             </div>
@@ -1002,7 +991,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1048,7 +1037,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1083,7 +1072,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1118,7 +1107,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1153,7 +1142,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1188,7 +1177,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1223,7 +1212,7 @@ function App() {
         <div className="team-member-page">
           <div className="team-member-header">
             <div className="team-member-breadcrumb">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>TEAM</a>
+              <span>TEAM</span>
               <span> / </span>
               <span>OUR LEADERSHIP</span>
             </div>
@@ -1270,7 +1259,6 @@ function App() {
             <ul className="footer-list">
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }}>Home</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('contact'); }}>Contact</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('team'); }}>Team</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }}>Capabilities</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('technical-review'); }}>Technical Review</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('commissioning'); }}>Commisioning</a></li>
@@ -1279,7 +1267,7 @@ function App() {
           <div className="footer-column">
             <h3 className="footer-heading">[ Find Us ]</h3>
             <ul className="footer-list">
-              <li>1143 kallugurren road lesumride</li>
+              <li></li>
             </ul>
           </div>
         </div>
